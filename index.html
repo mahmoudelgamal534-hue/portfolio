@@ -488,9 +488,7 @@
     $("#emailDisplay").textContent=CONFIG.email;
     $("#year").textContent=new Date().getFullYear();
     $("#linkedinLink").href=CONFIG.linkedin;$("#githubLink").href=CONFIG.github;
-    $("#whatsappLink").href=`https://wa.me/213794572945${CONFIG.whatsapp}`;
-
-    $("#langToggle").addEventListener("click",()=>setLanguage(language==="ar"?"en":"ar"));
+    $("#whatsappLink").href=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent("مرحبًا، شفت البورتفوليو بتاعك وعايز أستفسر عن خدماتك")}`;    $("#langToggle").addEventListener("click",()=>setLanguage(language==="ar"?"en":"ar"));
     $("#themeToggle").addEventListener("click",()=>{document.body.classList.toggle("light");$("#themeToggle").textContent=document.body.classList.contains("light")?"☾":"☼";});
     $("#menuToggle").addEventListener("click",()=>{const open=$("#navLinks").classList.toggle("open");$("#menuToggle").setAttribute("aria-expanded",String(open));$("#menuToggle").textContent=open?"×":"☰";});
     $$("#navLinks a").forEach(a=>a.addEventListener("click",()=>{$("#navLinks").classList.remove("open");$("#menuToggle").setAttribute("aria-expanded","false");$("#menuToggle").textContent="☰";}));
