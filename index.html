@@ -488,7 +488,7 @@
     $("#emailDisplay").textContent=CONFIG.email;
     $("#year").textContent=new Date().getFullYear();
     $("#linkedinLink").href=CONFIG.linkedin;$("#githubLink").href=CONFIG.github;
-    $("#whatsappLink").href=`https://wa.me/${CONFIG.whatsapp}`;
+    $("#whatsappLink").href=`https://wa.me/213794572945${CONFIG.whatsapp}`;
 
     $("#langToggle").addEventListener("click",()=>setLanguage(language==="ar"?"en":"ar"));
     $("#themeToggle").addEventListener("click",()=>{document.body.classList.toggle("light");$("#themeToggle").textContent=document.body.classList.contains("light")?"☾":"☼";});
